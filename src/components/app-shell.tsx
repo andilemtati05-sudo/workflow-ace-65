@@ -28,7 +28,7 @@ export const NAV_ITEMS = [
   { to: "/settings", label: "Settings", icon: SettingsIcon },
 ] as const;
 
-function NavList({ onNavigate }: { onNavigate?: () => void }) {
+function NavList({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
@@ -76,7 +76,7 @@ function Brand() {
   );
 }
 
-function SidebarInner({ onNavigate }: { onNavigate?: () => void }) {
+function SidebarInner({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <div className="flex h-full flex-col gap-6 bg-sidebar p-4">
       <Brand />
