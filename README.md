@@ -1,392 +1,114 @@
-# AI WorkMate
-
-Build a modern, responsive AI-powered workplace productivity web application called AI WorkFlow.
-
-PRODUCT PURPOSE
-
-AI WorkFlow is a unified workplace productivity platform that helps professionals automate common workplace tasks using artificial intelligence.
-
-The application must function as ONE integrated platform rather than separate disconnected tools.
-
-CORE FEATURES
-
-Implement these five AI-powered features:
-
-Smart Email Generator
-
-Meeting Notes Summarizer
-
-AI Task Planner
-
-AI Research Assistant
-
-AI Workplace Chatbot
-
-APPLICATION STRUCTURE
-
-Create a professional SaaS-style dashboard with:
-
-Left sidebar navigation
-
-Top navigation/header
-
-Main content area
-
-Responsive desktop and mobile layouts
-
-Dashboard overview
-
-User-friendly forms
-
-AI loading states
-
-Error states
-
-Empty states
-
-Editable AI outputs
-
-Copy-to-clipboard functionality
-
-Regenerate functionality where appropriate
-
-SIDEBAR
-
-Include:
-
-Dashboard
-
-Email Generator
-
-Meeting Summarizer
-
-Task Planner
-
-Research Assistant
-
-AI Assistant
-
-Settings
-
-DASHBOARD
-
-Create an attractive dashboard homepage containing:
-
-Welcome message
-
-Productivity overview
-
-Quick-action buttons
-
-Feature cards
-
-Recent AI activity
-
-Recently generated content
-
-Task overview
-
-The dashboard should make the five AI tools feel like parts of one unified productivity system.
-
-SMART EMAIL GENERATOR
-
-Create a form containing:
-
-Email purpose
-
-Recipient/context
-
-Key points
-
-Tone selector
-
-Tone options:
-
-Formal
-
-Professional
-
-Friendly
-
-Persuasive
-
-Generate a professional email.
-
-Display:
-
-Subject
-
-Email body
-
-Allow the user to:
-
-Edit the generated email
-
-Copy the email
-
-Regenerate the email
-
-Make it shorter
-
-Make it more professional
-
-Use structured prompt engineering.
-
-The AI must not invent facts that were not provided by the user.
-
-MEETING NOTES SUMMARIZER
-
-Allow users to paste long meeting notes.
-
-Generate structured output containing:
-
-Executive summary
-
-Key discussion points
-
-Decisions
-
-Action items
-
-Responsible person
-
-Deadlines
-
-Follow-up questions
-
-Display action items in a clean structured layout.
-
-Use structured AI prompting to separate summaries, decisions and actions.
-
-AI TASK PLANNER
-
-Allow users to enter multiple tasks.
-
-Collect where appropriate:
-
-Task name
-
-Deadline
-
-Estimated duration
-
-Importance
-
-Urgency
-
-Use AI to organize the tasks into a realistic daily or weekly schedule.
-
-Show:
-
-Priority
-
-Task
-
-Suggested time
-
-Deadline
-
-Reason for priority
-
-Allow users to mark tasks as completed.
-
-AI RESEARCH ASSISTANT
-
-Allow users to enter a research topic or workplace question.
-
-Generate:
-
-Executive summary
-
-Key insights
-
-Benefits
-
-Risks
-
-Recommendations
-
-Further questions
-
-Do not claim that information is sourced from the internet unless an actual web/search integration is available.
-
-Clearly distinguish AI-generated analysis from verified external sources.
-
-AI WORKPLACE CHATBOT
-
-Create an interactive chatbot interface.
-
-The assistant should behave as a professional workplace productivity assistant.
-
-It should help users with:
-
-Workplace writing
-
-Brainstorming
-
-Planning
-
-Meeting preparation
-
-Task organization
-
-Productivity questions
-
-Professional communication
-
-Include:
-
-Chat history during the session
-
-User and AI message styling
-
-Loading indicator
-
-Clear conversation button
-
-Where technically possible, allow the chatbot to help users transition between the other productivity tools.
-
-PROMPT ENGINEERING
-
-Use structured prompts with:
-
-Role
-
-Task
-
-Context
-
-Constraints
-
-User input
-
-Desired output format
-
-Prompts should explicitly instruct the AI to:
-
-Avoid fabricating information
-
-Preserve user-provided facts
-
-Ask for clarification when critical information is missing
-
-Produce structured outputs
-
-Use professional workplace language
-
-Avoid unnecessary content
-
-RESPONSIBLE AI
-
-Include a clearly visible responsible AI notice:
-
-"AI-generated content may contain errors or inaccuracies. Always review AI outputs before using them in workplace communications or making important decisions. Do not enter confidential, personal, or sensitive information."
-
-Include responsible AI guidance in the application.
-
-DESIGN
-
-Use a clean, modern, professional SaaS aesthetic.
-
-Design characteristics:
-
-Modern typography
-
-Consistent spacing
-
-Professional cards
-
-Rounded components
-
-Clear hierarchy
-
-Accessible contrast
-
-Subtle animations
-
-Clean icons
-
-Responsive layouts
-
-Mobile-friendly navigation
-
-Avoid excessive decoration.
-
-The application should look like a real commercial workplace productivity product rather than a student prototype.
-
-USER EXPERIENCE
-
-Every AI feature must have:
-
-Clear instructions
-
-Example input
-
-Generate button
-
-Loading state
-
-AI output area
-
-Error handling
-
-Copy functionality where appropriate
-
-Edit functionality where appropriate
-
-Never leave the user wondering what to enter.
-
-TECHNICAL REQUIREMENTS
-
-Create reusable components.
-
-Keep the code organized and maintainable.
-
-Use secure handling of API keys and never expose secret API keys in client-side code.
-
-If an AI API is required, structure the application so the API can be connected securely through a backend/server-side function.
-
-Create realistic sample data where necessary so the dashboard can be demonstrated.
-
-FINAL QUALITY
-
-The final application should demonstrate:
-
-Practical AI implementation
-
-Strong prompt engineering
-
-Real workplace problem solving
-
-Responsible AI
-
-Modern UI/UX
-
-Responsive design
-
-Integration of multiple AI capabilities into one coherent platform
-
-The application should feel like one unified AI workplace assistant, not five separate applications.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://workflow-ace-65.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/6ae25a4c-07d6-44c0-8324-8c75477d9992).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+# AI WorkFlow
+
+A modern, responsive AI-powered workplace productivity platform built with [TanStack Start](https://tanstack.com/start), [React 19](https://react.dev), and [Tailwind CSS v4](https://tailwindcss.com).
+
+AI WorkFlow brings five everyday workplace tasks into one clean dashboard: drafting email, summarising meetings, planning tasks, researching decisions, and chatting with an AI workplace assistant.
+
+![AI WorkFlow preview](https://workflow-ace-65.lovable.app/og-image.png)
+
+## Features
+
+| Tool | What it does |
+| --- | --- |
+| **Smart Email Generator** | Turn a purpose, key points and tone into a polished email with a ready-to-use subject line. |
+| **Meeting Notes Summarizer** | Convert raw meeting notes into an executive summary, decisions, owned action items and follow-up questions. |
+| **AI Task Planner** | Prioritise your day or week with a ranked schedule, reasoning for each slot and workload warnings. |
+| **AI Research Assistant** | Produce a structured briefing with insights, benefits, risks, recommendations and further questions. |
+| **AI Workplace Assistant** | Chat in a single conversation thread that persists locally and can hand off into any tool. |
+
+## Tech stack
+
+- **Framework:** TanStack Start v1 (full-stack React, SSR/SSG, server functions)
+- **Build tool:** Vite 7
+- **UI:** React 19, Radix UI primitives, Tailwind CSS v4, shadcn/ui components
+- **AI layer:** Lovable AI Gateway + `ai` SDK with structured object output
+- **State:** Browser-local storage via custom hooks (`localStorage`)
+- **Language:** TypeScript
+
+## Project structure
+
+```text
+src/
+├── assets/               # Brand logo and favicon
+├── components/           # Shared UI components and AI Elements chat UI
+├── lib/
+│   ├── ai-gateway.server.ts   # Secure server-side AI gateway helper
+│   ├── ai-run.server.ts       # AI SDK execution helpers
+│   ├── ai.functions.ts        # TanStack Start server functions
+│   ├── prompts.server.ts      # Structured prompts for each AI tool
+│   └── workspace-store.ts     # Local browser state (tasks, activity, settings)
+├── routes/               # TanStack Start file-based routes
+│   ├── index.tsx         # Dashboard
+│   ├── email.tsx         # Smart Email Generator
+│   ├── meetings.tsx      # Meeting Notes Summarizer
+│   ├── tasks.tsx         # AI Task Planner
+│   ├── research.tsx      # AI Research Assistant
+│   ├── assistant.tsx     # AI Workplace Assistant
+│   ├── settings.tsx      # User preferences
+│   └── api/chat.ts       # Streaming chat endpoint
+├── styles.css            # Design tokens, colours, typography
+└── router.tsx            # TanStack Router setup
+```
+
+## Getting started
+
+You need [Node.js](https://nodejs.org/) (v20 or later) and a package manager such as npm or bun.
+
+```bash
+# 1. Clone the repository
+git clone <repository-url>
+cd ai-workflow
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the dev server
 npm run dev
 ```
+
+The dev server runs at `http://localhost:8080`.
+
+## Environment variables
+
+AI calls are routed through the Lovable AI Gateway. The only required secret is:
+
+| Variable | Purpose |
+| --- | --- |
+| `LOVABLE_API_KEY` | Authenticates server-side AI requests via the Lovable AI Gateway |
+
+No third-party AI provider keys are required. Create a `.env` file at the project root:
+
+```bash
+LOVABLE_API_KEY=your-lovable-api-key
+```
+
+> **Note:** `LOVABLE_API_KEY` is server-only and is never exposed to the browser.
+
+## Available scripts
+
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Build for production |
+| `npm run build:dev` | Build in development mode |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Format code with Prettier |
+
+## Design principles
+
+- **One surface, five tools.** Every feature lives inside the same dashboard and shares context and history.
+- **Anti-fabrication prompts.** Each AI prompt instructs the model to use only the supplied input, flag missing information, and avoid invented facts.
+- **Browser-first privacy.** Tasks, settings and chat history are stored in `localStorage` by default; no account is required.
+- **Semantic tokens.** Colours, spacing and shadows are defined as CSS custom properties in `src/styles.css`, keeping the UI consistent and themeable.
+
+## Roadmap / possible next steps
+
+- Add user accounts and cloud persistence with Lovable Cloud.
+- Export generated emails and meeting summaries to PDF or Markdown.
+- Calendar integration for task deadlines.
+- Team workspaces with shared meeting notes and task assignments.
+
+## License
+
+This project is owned by its creator. Built and shipped with [Lovable](https://lovable.dev).
