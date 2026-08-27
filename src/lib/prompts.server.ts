@@ -18,7 +18,7 @@ export function emailPrompt(input: {
   context: string;
   keyPoints: string;
   tone: EmailTone;
-  adjustment?: "shorter" | "more-professional" | null;
+  adjustment?: "shorter" | "more-professional" | null | undefined;
 }) {
   const adjust =
     input.adjustment === "shorter"
@@ -80,10 +80,10 @@ export function plannerPrompt(input: {
   workingHours: string;
   tasks: Array<{
     name: string;
-    deadline?: string;
-    duration?: string;
-    importance?: string;
-    urgency?: string;
+    deadline?: string | undefined;
+    duration?: string | undefined;
+    importance?: string | undefined;
+    urgency?: string | undefined;
   }>;
 }) {
   const list = input.tasks
